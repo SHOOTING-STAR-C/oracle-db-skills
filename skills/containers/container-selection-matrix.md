@@ -12,7 +12,6 @@ Use this guide to quickly choose the right Oracle Container Registry (OCR) datab
 | `database/enterprise_ru` | You need CPU repository / RU-tagged Enterprise images (commonly 19c stream) | You want latest non-CPU stream (`enterprise`) | RU-tagged Enterprise server images under CPU terms |
 | `database/free` | You want Oracle AI Database 26ai Free for local development/learning | You need paid Enterprise capabilities | Fast-start Oracle Database Free server image |
 | `database/adb-free` | You need Autonomous Database Free container workflows (`ADW`/`ATP`) | You just need generic Database Free (`free`) | Autonomous DB Free image with workload modes and version matrix |
-| `database/express` | You need Oracle Database XE 21c for lightweight local/dev usage | You need newer AI Database Free/Enterprise features | XE-based database image with prebuilt database |
 | `database/rac` | You need Oracle RAC in containers (Podman-focused guidance) | You need RU-tagged RAC stream (`rac_ru`) | RAC container deployment line with production-focused docs |
 | `database/rac_ru` | You need CPU/RU-tagged RAC images | You want non-RU RAC stream (`rac`) | RAC release-update image stream under CPU terms |
 | `database/gsm` | You are deploying Oracle Globally Distributed Database and need GSM | You need RU-tagged GSM stream (`gsm_ru`) | Global Service Manager container for GDD setups |
@@ -61,7 +60,6 @@ OCR container repositories are split across product lines, not a single unified 
 - https://container-registry.oracle.com/ords/ocr/ba/database/enterprise_ru
 - https://container-registry.oracle.com/ords/ocr/ba/database/free
 - https://container-registry.oracle.com/ords/ocr/ba/database/adb-free
-- https://container-registry.oracle.com/ords/ocr/ba/database/express
 - https://container-registry.oracle.com/ords/ocr/ba/database/rac
 - https://container-registry.oracle.com/ords/ocr/ba/database/rac_ru
 - https://container-registry.oracle.com/ords/ocr/ba/database/gsm

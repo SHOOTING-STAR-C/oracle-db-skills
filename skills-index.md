@@ -156,7 +156,6 @@ A tracking file for skills.md topics to create for working with Oracle DB.
 - [x] `rac.md` — Oracle RAC container deployment guidance for Podman
 - [x] `private-ai.md` — Oracle Private AI Services container image and setup guidance
 - [x] `adb-free.md` — Oracle Autonomous Database Free container image with ADW/ATP guidance
-- [x] `express.md` — Oracle Database Express Edition (XE) container image
 - [x] `free.md` — Oracle AI Database 26ai Free container image
 - [x] `observability-exporter.md` — Unified observability exporter image for Oracle Database metrics, logs, and tracing
 - [x] `operator.md` — Oracle Database Operator for Kubernetes image repository

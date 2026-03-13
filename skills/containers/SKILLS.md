@@ -9,7 +9,6 @@ Complete index for container-related skills in `skills/containers/`.
 | `adb-free.md` | Oracle Autonomous Database Free container image with ADW/ATP guidance |
 | `enterprise.md` | Oracle AI Database Server Release 26ai Enterprise Edition container image |
 | `enterprise_ru.md` | Oracle Database Enterprise Edition CPU release-update image repository |
-| `express.md` | Oracle Database Express Edition (XE) container image |
 | `free.md` | Oracle AI Database 26ai Free container image |
 | `instantclient.md` | Oracle Instant Client container image with Basic, SDK, and SQL*Plus packages |
 | `ords.md` | Oracle REST Data Services container image repository |
