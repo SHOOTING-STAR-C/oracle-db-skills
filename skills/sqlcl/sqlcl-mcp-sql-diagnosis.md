@@ -65,9 +65,6 @@ sql /nolog
 -- 保存连接（普通连接方式）
 conn -save my_orcl -savepwd username/password@//hostname:1521/service_name
 
--- 或者使用 TNS 别名（需先配置 tnsnames.ora）
-conn -save my_tns -savepwd username/password@tns_alias
-
 -- 验证连接已保存
 conn -list
 ```
@@ -132,9 +129,7 @@ Restrict 级别说明：
     "oracle-sqlcl": {
       "command": "D:\\sqlcl\\bin\\sql.exe",
       "args": ["-mcp"],
-      "env": {
-        "TNS_ADMIN": "D:\\oracle\\network\\admin"
-      }
+      "type": "stdio"
     }
   }
 }
@@ -146,7 +141,7 @@ Restrict 级别说明：
 
 在文件管理器中找到 `sql.exe` 的位置，或在命令提示符中运行 `where sql`。
 
-**重启 Claude Desktop** 使配置生效。
+**重启 Claude** 使配置生效。
 
 ---
 
@@ -160,13 +155,27 @@ claude mcp add oracle-sqlcl D:\sqlcl\bin\sql.exe -- -mcp
 claude mcp list
 ```
 
-或者手动创建 `.mcp.json`：
+或者手动创建 `.mcp.json`（项目级配置）：
 ```json
 {
   "mcpServers": {
     "oracle-sqlcl": {
       "command": "D:\\sqlcl\\bin\\sql.exe",
-      "args": ["-mcp"]
+      "args": ["-mcp"],
+      "type": "stdio"
+    }
+  }
+}
+```
+
+全局配置（所有项目生效），编辑 `~/.claude.json`：
+```json
+{
+  "mcpServers": {
+    "oracle-sqlcl": {
+      "command": "D:\\sqlcl\\bin\\sql.exe",
+      "args": ["-mcp"],
+      "type": "stdio"
     }
   }
 }
@@ -175,22 +184,6 @@ claude mcp list
 > Windows 下建议使用完整绝对路径。
 
 ---
-
-### 2.3 VS Code + Cline
-
-编辑 `cline_mcp_settings.json`（路径通常是 `%APPDATA%\Code\User\settings.json` 或项目根目录）：
-
-```json
-{
-  "mcpServers": {
-    "oracle-sqlcl": {
-      "command": "D:\\sqlcl\\bin\\sql.exe",
-      "args": ["-mcp"],
-      "disabled": false
-    }
-  }
-}
-```
 
 ---
 

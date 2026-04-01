@@ -142,7 +142,22 @@ Or manually create/edit `.mcp.json` in your project directory:
   "mcpServers": {
     "sqlcl": {
       "command": "/path/to/sql",
-      "args": ["-mcp"]
+      "args": ["-mcp"],
+      "type": "stdio"
+    }
+  }
+}
+```
+
+For a global configuration (all projects), edit `~/.claude.json`:
+
+```json
+{
+  "mcpServers": {
+    "oracle-sqlcl-mcp": {
+      "command": "D:\\software\\sqlcl\\bin\\sql",
+      "args": ["-mcp"],
+      "type": "stdio"
     }
   }
 }
